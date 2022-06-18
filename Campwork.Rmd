@@ -1,0 +1,44 @@
+---
+title: "Setup"
+author: "Yuhan Wu"
+date: '2022-06-18'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(usethis)
+library(tidyverse)
+```
+
+```{r}
+# Primer Setup
+
+library(usethis)  
+create_from_github("PPBDS/primer",   
+                    fork = TRUE,   
+                    destdir = "/Users/GreatMax/Desktop/Bootcamp2022/",   
+                    protocol = "https")  
+```
+
+
+```{r}
+# Primer.tutorials Setup
+
+library(usethis) 
+create_from_github("PPBDS/primer.tutorials",   
+                    fork = TRUE,   
+                    destdir = "/Users/GreatMax/Desktop/Bootcamp2022/",   
+                    protocol = "https")  
+```
+
+```{r}
+# Primer.data within session
+
+library(remotes)
+remotes::install_github("PPBDS/primer.tutorials")
+```
+
